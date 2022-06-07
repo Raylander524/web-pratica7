@@ -1,5 +1,6 @@
 package br.ufc.web.lab_07.controler;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,6 +32,8 @@ public class TurmaRestControler{
 
 	@PostMapping("/api/turma")
 	public void addTurma(@RequestBody Turma turma) {
+		if(turma.getAlunos() == null)
+			turma.setAlunos(new ArrayList<Aluno>());
 		turmaServices.addTurmas(turma);
 	}
 

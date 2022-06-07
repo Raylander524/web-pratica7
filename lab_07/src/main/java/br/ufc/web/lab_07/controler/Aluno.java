@@ -5,6 +5,12 @@ public class Aluno {
     private String nome;
     private String email;
 
+    public Aluno(){
+        this.matricula = 0;
+        this.nome = "";
+        this.email = "";
+    }
+
     public Aluno(int matricula, String nome, String email){
         this.matricula = matricula;
         this.nome = nome;
